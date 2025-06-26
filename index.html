@@ -11,8 +11,74 @@
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
   </head>
   <body class="min-h-screen bg-orange-100 dark:bg-black dark:text-white overflow-x-hidden">
-    <h1 class="text-3xl font-bold underline">
-      Hello world!
-    </h1>
+    <section id="chatbot" class="bg-[url('img/chatbot-section-background.jpeg')] bg-cover bg-center bg-no-repeat min-h-screen py-10 px-2">
+
+      <!-- Chatbot container-->
+      <div class="relative">
+        <!--Section title-->
+        <div class="flex justify-center">
+          <h2 class="bg-white inline-block px-10 text-3xl font-italianno text-center mb-8">
+            Chat With Our Chef
+          </h2>
+        </div>
+        <!--Chatbot interface-->
+        <div class="bg-white rounded max-w-[400px] mx-auto py-6 text-center"> <span class="font-italianno text-2xl">Ask Chef Kofi</span>
+          <!--Chatbot messages-->
+          <div class="w-full h-[400px] overflow-y-auto mb-4 bg-orange-100 scroll-smooth">
+            <!--Bot Message-->
+            <div class=" mt-12 mb-8 flex items-start gap-1">
+              <div class="flex items-center justify-center text-3xl flex-shrink-0">🧑‍🍳</div>
+              <div class="max-w-[70%] px-2 py-3 rounded-[18px] bg-white text-black breakwords">
+                Hey there. How can I help you today?
+              </div> 
+            </div>
+            <!--User Message-->
+            <div class="mb-8 flex justify-end gap-1">
+              <div class="max-w-[70%] px-2 py-3 rounded-[18px] bg-white text-black breakwords">
+                What is your most popular dish?
+              </div> 
+            </div>
+            <!-- Typing Indicator -->
+            <div id="typingIndicator" class="flex items-center gap-2 px-4 py-3 text-gray-800 rounded-[18px] rounded-bl-[4px] max-w-fit">
+
+              <div class="flex gap-[0.2rem]">
+                <div class="w-2 h-2 bg-gray-600 rounded-full typing-dot delay-1"></div>
+                <div class="w-2 h-2 bg-gray-600 rounded-full typing-dot delay-2"></div>
+                <div class="w-2 h-2 bg-gray-600 rounded-full typing-dot"></div>
+              </div>
+
+              <span class="ml-2"></span>
+            </div>
+          </div>
+          <!-- Input Area -->
+          <div class="flex items-center gap-1">
+            <input type="text" placeholder="Write your Message"
+              class="flex-grow px-4 py-3 border-2 border-white rounded outline-none focus:border-amber-600" />
+            <button 
+              class="w-[45px] h-[45px] bg-white text-black flex items-center justify-center text-xl">
+              🙂
+            </button>
+            <button 
+              class="w-[45px] h-[45px] bg-white text-black flex items-center justify-center text-xl">
+              📩
+            </button>
+          </div>
+        </div>
+      </div>
+      
+      <div class="px-10 py-10 mt-8">
+        <ul class="space-y-8">
+          <li class="bg-orange-100 px-7 py-3 cursor-pointer">
+            What is your most popular dish?
+          </li>
+          <li class="bg-orange-100 px-7 py-3 cursor-pointer">
+            How long does it take for food to be ready?
+          </li>
+          <li class="bg-orange-100 px-7 py-3 cursor-pointer">
+            Do you offer delivery services?
+          </li>
+        </ul>
+      </div>
+    </section>
   </body>
 </html>
