@@ -8,15 +8,19 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <script src="main.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script>
-      tailwind.config = {
-        darkMode: 'class',
-    }
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {}
+            }
+        };
     </script>
+    <title>Paradiso Afrique Restaurant</title>
   </head>
   <body class="min-h-screen bg-orange-100 dark:bg-black dark:text-white overflow-x-hidden scroll-smooth">
-    <header class="bg-amber-600 text-black sticky top-0 z-100">
+    <header class="bg-amber-600 text-black sticky top-0 z-40">
         <section class="max-w-4xl flex flex-wrap justify-between items-center">
             <figure class="mr-auto min-w-[150px] max-w-[293px]">
                 <img src="img/nav-bar-logo.jpeg" alt="Paradiso Logo" class="w-full h-auto">
@@ -100,24 +104,24 @@
         <section id="story">
             <!-- Title -->
             <div class="flex justify-center">
-                <h2 class="bg-orange-50 inline-block px-5 rounded-lg text-5xl font-italianno text-center mb-8">
+                <h2 class="bg-orange-50 dark:text-black inline-block px-5 rounded-lg text-5xl font-italianno text-center mb-8">
                     Paradiso Afrique Story
                 </h2>
             </div>
             <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
                 <!-- Image -->
                 <div>
-                    <img src="img/about-us-image.jpeg" alt="image" class="w-335 h-150 object-cover rounded-none border-none shadow-none" />
+                    <img src="img/about-us-image.jpeg" alt="image" class="w-full h-50 object-cover rounded-none border-none shadow-none" />
                 </div>
                 <!-- Text -->
                 <div class="px-4 py-5 mt-20">
-                    <p class="text-gray-900 mb-8 text-base leading-relaxed">
+                    <p class="mb-8 text-base leading-relaxed">
                         At Paradiso Afrique, we bring Africa to your plate one soulful dish at a time. Inspired by the warmth of home and the rhythm of our roots, our space is a celebration of culture, flavor, and connection.
                     </p>
-                    <p class="text-gray-900 mb-4 text-base leading-relaxed">
+                    <p class="mb-4 text-base leading-relaxed">
                         From Nigerian jollof to Kenyan chapati, every recipe tells a story and every visit feels like a journey through the heart of the continent.
                     </p>
-                    <p class="text-gray-900 font-semibold text-base">Pull up a chair. You're home.</p>
+                    <p class="font-semibold text-base">Pull up a chair. You're home.</p>
                 </div>  
             </div>    
         </section>
@@ -250,12 +254,12 @@
         <div class="relative">
             <!--Section title-->
             <div class="flex justify-center">
-                <h2 class="bg-white inline-block px-20 text-3xl font-italianno text-center mb-8">
+                <h2 class="bg-white dark:text-black inline-block px-20 text-3xl font-italianno text-center mb-8">
                     Chat With Our Chef
                 </h2>
             </div>
             <!--Chatbot interface-->
-            <div class="bg-white rounded max-w-[400px] ml-10 py-6 text-center"> <span class="font-italianno text-2xl">Ask Chef Kofi</span>
+            <div class="bg-white rounded max-w-[400px] ml-10 py-6 text-center"> <span class="font-italianno dark:text-black text-2xl">Ask Chef Kofi</span>
             <!--Chatbot messages-->
             <div class="w-full h-[400px] overflow-y-auto mb-4 bg-orange-100 scroll-smooth">
                 <!--Bot Message-->
@@ -301,13 +305,13 @@
             
         <div class="inline-block px-10 py-10 mt-8">
             <ul class="space-y-8">
-            <li class="bg-orange-100 px-22 py-3 cursor-pointer hover:text-gray-300">
+            <li class="bg-orange-100 dark:text-black px-22 py-3 cursor-pointer hover:text-gray-300">
                 What is your most popular dish?
             </li>
-            <li class="bg-orange-100 px-7 py-3 cursor-pointer hover:text-gray-300">
+            <li class="bg-orange-100 dark:text-black px-7 py-3 cursor-pointer hover:text-gray-300">
                 How long does it take for food to be ready?
             </li>
-            <li class="bg-orange-100 px-7 py-3 cursor-pointer hover:text-gray-300">
+            <li class="bg-orange-100 dark:text-black px-7 py-3 cursor-pointer hover:text-gray-300">
                 Do you offer delivery services?
             </li>
             </ul>
@@ -315,7 +319,7 @@
         </section>
     </main>
 
-    <footer class="bg-[#f5e4cc] py-8 px-4 mt-auto">
+    <footer class="py-8 px-4 mt-auto">
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
         <!-- Left: Navigation & Contact -->
             <div>
