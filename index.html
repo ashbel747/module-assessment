@@ -9,88 +9,176 @@
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <script src="main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+    }
+    </script>
   </head>
-  <body class="min-h-screen bg-orange-100 dark:bg-black dark:text-white overflow-x-hidden">
-    <section id="dishes" class="py-10 px-2">
+  <body class="min-h-screen bg-orange-100 dark:bg-black dark:text-white overflow-x-hidden scroll-smooth">
+    <header class="bg-amber-600 text-black sticky top-0 z-100">
+        <section class="max-w-4xl flex flex-wrap justify-between items-center">
+            <figure class="mr-auto min-w-[150px] max-w-[293px]">
+                <img src="img/nav-bar-logo.jpeg" alt="Paradiso Logo" class="w-full h-auto">
+                <figcaption class="absolute -left-[10000px]">
+                    Paradiso Logo
+                </figcaption>
+            </figure>
+            <nav class="flex flex-row gap-x-6 items-center">
+                <a href="#hero" class=" text-center px-2 py-3 hover:opacity-50">
+                    Home
+                </a>
+                
+                <a href="#story" class=" text-center px-2 py-3  hover:opacity-50">
+                    Our story
+                </a>
+            
+                <div class="relative group">
+                    <button class="text-center px-2 py-3  hover:opacity-50">
+                        Menu    
+                    </button>
 
-        <div class="flex justify-center">
-        <h2 class="bg-amber-600 inline-block px-5 rounded-lg text-5xl font-italianno text-center mb-8">
-            Our Signature Dishes
-        </h2>
-        </div>
-
-        <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mx-auto">
-        
-        <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition-all duration-300">
-            <img src="img/dish-1.jpeg" alt="Nigerian Jollof Rice" class="w-full h-48 object-cover">
-            <div class="p-2">
-                <h3 class="text-xl font-italianno mb-2">Nigerian Jollof Rice</h3>
-                <p>Smoky, spicy tomato rice cooked to perfection. A West African classic.</p>
+                    <ul class="absolute top-full left-0 mt-1 bg-amber-600 text-black shadow-md hidden group-hover:block z-20 w-40">
+                        <li>
+                            <a href="#starters" class="block px-2 py-3 hover:opacity-50">
+                                Starters
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#main-dishes" class="block px-2 py-3 hover:opacity-50">
+                                Main Dishes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#drinks" class="block px-2 py-3 hover:opacity-50">
+                                Drinks
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#desserts" class="block px-2 py-3 hover:opacity-50">
+                                Desserts
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#feedback" class="text-center px-2 py-3 hover:opacity-50">
+                    Feedback
+                </a>
+                <a href="#chatbot" class="text-center px-2 py-3 hover:opacity-50">
+                    Chat
+                </a>
+                <button id="themeBtn" class="text-2xl ml-6 px-2 py-3 hover:opacity-50">
+                    ☀️
+                </button>
+            </nav>
+        </section>
+    </header>
+    <main class="w-full">
+        <section id="hero" class=" relative w-screen h-screen scroll-mt-40 overflow-hidden">
+            <div class="absolute inset-0">
+                <div id="carousel" class="flex w-screen h-screen transition-transform duration-[6000ms] ease-in-out">
+                    <img src="img/hero-carousel-1.jpeg" class="w-screen object-cover h-screen flex-shrink-0" />
+                    <img src="img/hero-carousel-2.jpeg" class="w-screen object-cover h-screen flex-shrink-0" />
+                    <img src="img/hero-carousel-3.jpeg" class="w-screen object-cover h-screen flex-shrink-0" />
+                    <img src="img/hero-carousel-4.jpeg" class="w-screen object-cover h-screen flex-shrink-0" />
+                </div>
             </div>
-        </div>
 
-        <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
-            <img src="img/dish-2.jpeg" alt="Kenyan Chapati Beef Stew" class="w-full h-48 object-cover">
-            <div class="p-2">
-                <h3 class="text-xl font-italianno mb-2">Kenyan Chapati Beef Stew</h3>
-                <p>Soft chapati paired with rich, slow cooked beef in a savory gravy.</p>
+            <div class="z-10 absolute inset-0 flex flex-col items-center justify-center text-center gap-6 px-4 py-8">
+                <h2 id="typeWriter" class="font-italianno text-3xl sm:text-4xl 
+                md:text-6xl lg:text-7xl
+                text-white">
+                
+                </h2>
+                <button class="px-2 py-3 bg-orange-100 text-black font-bold rounded">
+                    RESERVE A SEAT
+                </button>
             </div>
-        </div>
 
-        
-        <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
-            <img src="img/dish-3.jpeg" alt="Nigerian Ewedu Soup" class="w-full h-48 object-cover">
-            <div class="p-2">
-                <h3 class="text-xl font-italianno mb-2">Nigerian Ewedu Soup</h3>
-                <p>A silky green soup made from jute leaves, perfect with swallow.</p>
-            </div>
-        </div>
+        </section>
 
-        
-        <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
-            <img src="img/dish-4.jpeg" alt="Ethiopian Doro Wat" class="w-full h-48 object-cover">
-            <div class="p-2">
-                <h3 class="text-xl font-italianno mb-2">Ethiopian Doro Wat</h3>
-                <p>Spiced chicken stew simmered in berbere and onions — Ethiopia's pride.</p>
-            </div>
-        </div>
+  
+        <section id="dishes" class="py-10 px-2">
 
-        
-        <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
-            <img src="img/dish-5.jpeg" alt="Swahili Biryani Rice" class="w-full h-48 object-cover">
-            <div class="p-2">
-                <h3 class="text-xl font-italianno mb-2">Swahili Biryani Rice</h3>
-                <p>Aromatic rice layered with marinated meat, bursting with coastal spices.</p>
+            <div class="flex justify-center">
+                <h2 class="bg-amber-600 inline-block px-5 rounded-lg text-5xl font-italianno text-center mb-8">
+                    Our Signature Dishes
+                </h2>
             </div>
-        </div>
 
-        
-        <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
-            <img src="img/dish-6.jpeg" alt="Ghanaian Kontomire Ampesi" class="w-full h-48 object-cover">
-            <div class="p-2">
-                <h3 class="text-xl font-italianno mb-2">Ghanaian Kontomire Ampesi</h3>
-                <p>Boiled yam with creamy spinach stew and palm oil — earthy and comforting.</p>
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mx-auto">
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition-all duration-300">
+                <img src="img/dish-1.jpeg" alt="Nigerian Jollof Rice" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Nigerian Jollof Rice</h3>
+                    <p>Smoky, spicy tomato rice cooked to perfection. A West African classic.</p>
+                </div>
             </div>
-        </div>
 
-        
-        <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
-            <img src="img/dish-7.jpeg" alt="Kenyan Ugali Goat Fry" class="w-full h-48 object-cover">
-            <div class="p-2">
-                <h3 class="text-xl font-italianno mb-2">Kenyan Ugali Goat Fry</h3>
-                <p>Hearty maize meal served with tender goat sautéed in herbs and spices.</p>
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-2.jpeg" alt="Kenyan Chapati Beef Stew" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Kenyan Chapati Beef Stew</h3>
+                    <p>Soft chapati paired with rich, slow cooked beef in a savory gravy.</p>
+                </div>
             </div>
-        </div>
 
-        
-        <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
-            <img src="img/dish-8.jpeg" alt="Eritrean Beef Zigni" class="w-full h-48 object-cover">
-            <div class="p-2">
-                <h3 class="text-xl font-italianno mb-2">Eritrean Beef Zigni</h3>
-                <p>Spicy beef stew rich in flavor, served with injera or flatbread.</p>
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-3.jpeg" alt="Nigerian Ewedu Soup" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Nigerian Ewedu Soup</h3>
+                    <p>A silky green soup made from jute leaves, perfect with swallow.</p>
+                </div>
             </div>
-        </div>
-        </div>
-    </section>
+
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-4.jpeg" alt="Ethiopian Doro Wat" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Ethiopian Doro Wat</h3>
+                    <p>Spiced chicken stew simmered in berbere and onions — Ethiopia's pride.</p>
+                </div>
+            </div>
+
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-5.jpeg" alt="Swahili Biryani Rice" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Swahili Biryani Rice</h3>
+                    <p>Aromatic rice layered with marinated meat, bursting with coastal spices.</p>
+                </div>
+            </div>
+
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-6.jpeg" alt="Ghanaian Kontomire Ampesi" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Ghanaian Kontomire Ampesi</h3>
+                    <p>Boiled yam with creamy spinach stew and palm oil — earthy and comforting.</p>
+                </div>
+            </div>
+
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-7.jpeg" alt="Kenyan Ugali Goat Fry" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Kenyan Ugali Goat Fry</h3>
+                    <p>Hearty maize meal served with tender goat sautéed in herbs and spices.</p>
+                </div>
+            </div>
+
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-8.jpeg" alt="Eritrean Beef Zigni" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Eritrean Beef Zigni</h3>
+                    <p>Spicy beef stew rich in flavor, served with injera or flatbread.</p>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
 </body>
 </html>
