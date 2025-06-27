@@ -47,3 +47,15 @@ if (localStorage.getItem('theme') === 'dark') {
   document.documentElement.classList.add('dark');
 }
 iconChange();
+
+document.getElementById('feedbackForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+      alert('Thank you for your feedback!');
+      this.reset();
+    });
+
+// Mobile menu toggle
+    document.getElementById('footerMenuBtn').addEventListener('click', function() {
+      const menu = document.getElementById('footerMenu');
+      menu.classList.toggle('hidden');
+    });
