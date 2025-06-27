@@ -59,3 +59,9 @@ document.getElementById('feedbackForm').addEventListener('submit', function(e) {
       const menu = document.getElementById('footerMenu');
       menu.classList.toggle('hidden');
     });
+
+//reserve a seat button    
+document.getElementById('ctaBtn').addEventListener('click', function(f) {
+      f.preventDefault();
+      alert("Thank you for your interest. We'll reach once we launch!");
+    });
