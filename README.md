@@ -2,6 +2,12 @@
 
 Paradiso Afrique restaurant is an African restaurant that mainly deals in preparing delicious dishes from various African countries e.g Kenya, Ethipia and Nigeria. The website is designed to get customers to know more about the restaurant, it's dishes, e.t.c.
 
+## 🚀 Team members
+
+- Lily Joy (UI/UX)
+- Ashbel King'ori(Full-stack dev)
+- Mahder Hawaz(Full-stack dev)
+- Ermias Molla(Gen-ai)
 
 ## 🚀 Key Features
 
@@ -13,6 +19,8 @@ Paradiso Afrique restaurant is an African restaurant that mainly deals in prepar
 ## 🖼️ Demo
 
 Live site: https://ashbel747.github.io/module-assessment/
+
+
 
 
 ## 🛠️ Technologies Used
