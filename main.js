@@ -61,7 +61,10 @@ document.getElementById('feedbackForm').addEventListener('submit', function(e) {
     });
 
 //reserve a seat button    
-document.getElementById('ctaBtn').addEventListener('click', function(f) {
-      f.preventDefault();
-      alert("Thank you for your interest. We'll reach once we launch!");
+document.addEventListener("DOMContentLoaded", () => {
+    const ctabtn = document.getElementById("ctaBtn");
+
+    ctabtn.addEventListener("click", () => {
+        alert("Thanks for showing interest. We'll reach you once we launch!");
     });
+});
