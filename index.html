@@ -9,6 +9,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
     <script src="main.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+    }
+    </script>
   </head>
   <body class="min-h-screen bg-orange-100 dark:bg-black dark:text-white overflow-x-hidden">
     <header class="bg-amber-600 text-black sticky top-0 z-100">
@@ -62,8 +67,8 @@
                 <a href="#chatbot" class="text-center px-2 py-3 hover:opacity-50">
                     Chat
                 </a>
-                <button class="text-2xl ml-6 px-2 py-3 hover:opacity-50">
-                    🌙
+                <button id="themeBtn" class="text-2xl ml-6 px-2 py-3 hover:opacity-50">
+                    ☀️
                 </button>
             </nav>
         </section>

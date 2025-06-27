@@ -19,4 +19,31 @@ const text = "Paradiso Afrique";
     }
   }
 
-  document.addEventListener("DOMContentLoaded", typeWriter);
+document.addEventListener("DOMContentLoaded", typeWriter);
+
+const themeBtn = document.getElementById('themeBtn');
+
+function iconChange() {
+  if (document.documentElement.classList.contains('dark')){
+    themeBtn.textContent = '☀️'
+  } else {
+    themeBtn.textContent = '🌙'
+  }
+}
+
+themeBtn.addEventListener('click', () => {
+  document.documentElement.classList.toggle('dark');
+
+  if (document.documentElement.classList.contains('dark')) {
+    localStorage.setItem('theme', 'dark');
+  } else {
+    localStorage.setItem('theme', 'light');
+  }
+
+  iconChange();
+});
+
+if (localStorage.getItem('theme') === 'dark') {
+  document.documentElement.classList.add('dark');
+}
+iconChange();
