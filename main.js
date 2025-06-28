@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     typingIndicator.style.display = 'flex';
 
     try {
-      const response = await fetch('https://your-backend-url/api/chat', { // <-- Replace with your backend URL
+      const response = await fetch('https://module-assessment-1.onrender.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message })
