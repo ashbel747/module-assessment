@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <script src="main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {}
+            }
+        };
+    </script>
+    <title>Paradiso Afrique Restaurant</title>
+  </head>
+  <body class="min-h-screen bg-orange-100 dark:bg-black dark:text-white overflow-x-hidden scroll-smooth">
+    <header class="bg-amber-600 dark:bg-black text-black dark:text-white sticky top-0 z-40">
+        <section class="max-w-4xl flex flex-wrap justify-between items-center">
+            <figure class="mr-auto min-w-[150px] max-w-[293px]">
+                <img src="img/nav-bar-logo.jpeg" alt="Paradiso Logo" class="w-full h-auto">
+                <figcaption class="absolute -left-[10000px]">
+                    Paradiso Logo
+                </figcaption>
+            </figure>
+            <nav class="flex flex-row gap-x-6 items-center">
+                <a href="#hero" class=" text-center px-2 py-3 hover:opacity-50">
+                    Home
+                </a>
+                
+                <a href="#story" class=" text-center px-2 py-3  hover:opacity-50">
+                    Our story
+                </a>
+            
+                <div class="relative group">
+                    <button class="text-center px-2 py-3  hover:opacity-50">
+                        Menu    
+                    </button>
+
+                    <ul class="absolute top-full left-0 mt-1 bg-amber-600 text-black shadow-md hidden group-hover:block z-20 w-40">
+                        <li>
+                            <a href="#starters" class="block px-2 py-3 hover:opacity-50">
+                                Starters
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#main-dishes" class="block px-2 py-3 hover:opacity-50">
+                                Main Dishes
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#drinks" class="block px-2 py-3 hover:opacity-50">
+                                Drinks
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#desserts" class="block px-2 py-3 hover:opacity-50">
+                                Desserts
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <a href="#feedback" class="text-center px-2 py-3 hover:opacity-50">
+                    Feedback
+                </a>
+                <a href="#chatbot" class="text-center px-2 py-3 hover:opacity-50">
+                    Chat
+                </a>
+                <button id="themeBtn" class="text-2xl ml-6 px-2 py-3 hover:opacity-50">
+                    ☀️
+                </button>
+            </nav>
+        </section>
+    </header>
+    <main class="w-full">
+        <section id="hero" class=" relative w-screen h-screen scroll-mt-40 overflow-hidden">
+            <div class="absolute inset-0">
+                <div id="carousel" class="flex w-screen h-screen transition-transform duration-[6000ms] ease-in-out">
+                    <img src="img/hero-carousel-1.jpeg" class="w-screen object-cover h-screen flex-shrink-0" />
+                    <img src="img/hero-carousel-2.jpeg" class="w-screen object-cover h-screen flex-shrink-0" />
+                    <img src="img/hero-carousel-3.jpeg" class="w-screen object-cover h-screen flex-shrink-0" />
+                    <img src="img/hero-carousel-4.jpeg" class="w-screen object-cover h-screen flex-shrink-0" />
+                </div>
+            </div>
+
+            <div class="z-10 absolute inset-0 flex flex-col items-center justify-center text-center gap-6 px-4 py-8">
+                <h2 id="typeWriter" class="font-italianno text-3xl sm:text-4xl 
+                md:text-6xl lg:text-7xl
+                text-white">
+                
+                </h2>
+                <button id="ctaBtn" class="px-2 py-3 bg-orange-100 text-black font-bold rounded cursor-pointer">
+                    RESERVE A SEAT
+                </button>
+            </div>
+
+        </section>
+
+        <section id="story">
+            <!-- Title -->
+            <div class="flex justify-center">
+                <h2 class="bg-orange-50 dark:text-black inline-block px-5 rounded-lg text-5xl font-italianno text-center mb-8">
+                    Paradiso Afrique Story
+                </h2>
+            </div>
+            <div class="grid sm:grid-cols-1 md:grid-cols-2 gap-8 mx-auto">
+                <!-- Image -->
+                <div>
+                    <img src="img/about-us-image.jpeg" alt="image" class="w-full h-50 object-cover rounded-none border-none shadow-none" />
+                </div>
+                <!-- Text -->
+                <div class="px-4 py-5 mt-20">
+                    <p class="mb-8 text-base leading-relaxed">
+                        At Paradiso Afrique, we bring Africa to your plate one soulful dish at a time. Inspired by the warmth of home and the rhythm of our roots, our space is a celebration of culture, flavor, and connection.
+                    </p>
+                    <p class="mb-4 text-base leading-relaxed">
+                        From Nigerian jollof to Kenyan chapati, every recipe tells a story and every visit feels like a journey through the heart of the continent.
+                    </p>
+                    <p class="font-semibold text-base">Pull up a chair. You're home.</p>
+                </div>  
+            </div>    
+        </section>
+
+  
+        <section id="dishes" class="py-10 px-2">
+
+            <div class="flex justify-center">
+                <h2 class="bg-amber-600 inline-block px-5 rounded-lg text-5xl font-italianno text-center mb-8">
+                    Our Signature Dishes
+                </h2>
+            </div>
+
+            <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-8 mx-auto">
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition-all duration-300">
+                <img src="img/dish-1.jpeg" alt="Nigerian Jollof Rice" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Nigerian Jollof Rice</h3>
+                    <p>Smoky, spicy tomato rice cooked to perfection. A West African classic.</p>
+                </div>
+            </div>
+
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-2.jpeg" alt="Kenyan Chapati Beef Stew" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Kenyan Chapati Beef Stew</h3>
+                    <p>Soft chapati paired with rich, slow cooked beef in a savory gravy.</p>
+                </div>
+            </div>
+
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-3.jpeg" alt="Nigerian Ewedu Soup" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Nigerian Ewedu Soup</h3>
+                    <p>A silky green soup made from jute leaves, perfect with swallow.</p>
+                </div>
+            </div>
+
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-4.jpeg" alt="Ethiopian Doro Wat" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Ethiopian Doro Wat</h3>
+                    <p>Spiced chicken stew simmered in berbere and onions — Ethiopia's pride.</p>
+                </div>
+            </div>
+
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-5.jpeg" alt="Swahili Biryani Rice" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Swahili Biryani Rice</h3>
+                    <p>Aromatic rice layered with marinated meat, bursting with coastal spices.</p>
+                </div>
+            </div>
+
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-6.jpeg" alt="Ghanaian Kontomire Ampesi" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Ghanaian Kontomire Ampesi</h3>
+                    <p>Boiled yam with creamy spinach stew and palm oil — earthy and comforting.</p>
+                </div>
+            </div>
+
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-7.jpeg" alt="Kenyan Ugali Goat Fry" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Kenyan Ugali Goat Fry</h3>
+                    <p>Hearty maize meal served with tender goat sautéed in herbs and spices.</p>
+                </div>
+            </div>
+
+            
+            <div class="overflow-hidden transform hover:scale-105 hover:shadow-xl transition duration-300">
+                <img src="img/dish-8.jpeg" alt="Eritrean Beef Zigni" class="w-full h-48 object-cover">
+                <div class="p-2">
+                    <h3 class="text-xl font-italianno mb-2">Eritrean Beef Zigni</h3>
+                    <p>Spicy beef stew rich in flavor, served with injera or flatbread.</p>
+                </div>
+            </div>
+          </div>
+        </section>
+
+        <section id="feedback" class="bg-[url('img/feedback-form-background.jpeg')] bg-cover bg-center bg-no-repeat min-h-screen py-10 px-2">
+            <!-- Feedback form container -->
+            <div class="w-full min-h-screen flex items-center justify-center relative z-10">
+                <div class="bg-[#f5e3c3] rounded-xl shadow-lg px-6 py-8 w-full max-w-md mx-auto">
+                <div class="flex flex-col items-center mb-4">
+                    <div class="bg-[#7ca982] px-8 py-2 rounded-md mb-4 shadow cursive text-2xl text-black" style="font-family: 'Dancing Script', cursive;">
+                    Feedback Form
+                    </div>
+                    <div class="mb-4 w-full flex justify-center">
+                    <div class="bg-[#e6a94d] text-xs text-black px-4 py-2 rounded shadow text-center w-full max-w-xs">
+                        Tell us about Your Experience at Paradiso Afrique
+                    </div>
+                    </div>
+                </div>
+                <form id="feedbackForm" class="space-y-4">
+                    <div>
+                    <label class="block text-gray-700 mb-1" for="name">Full Name:</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-300 bg-white" type="text" id="name" required>
+                    </div>
+                    <div>
+                    <label class="block text-gray-700 mb-1" for="email">Email:</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-300 bg-white" type="email" id="email" required>
+                    </div>
+                    <div>
+                    <label class="block text-gray-700 mb-1" for="phone">Phone (Optional):</label>
+                    <input class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-300 bg-white" type="tel" id="phone">
+                    </div>
+                    <div>
+                    <label class="block text-gray-700 mb-1" for="message">Message:</label>
+                    <textarea class="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:ring-2 focus:ring-green-300 bg-white" id="message" rows="4" required></textarea>
+                    </div>
+                    <div class="text-center">
+                    <button type="submit" class="bg-[#7ca982] text-white px-8 py-2 rounded hover:bg-green-800 transition">SUBMIT</button>
+                    </div>
+                </form>
+                </div>
+            </div>
+        </section>
+    
+        <section id="chatbot" class="bg-[url('img/chatbot-section-background.jpeg')] bg-cover bg-left bg-no-repeat min-h-screen py-10 px-2">
+
+        <!-- Chatbot container-->
+        <div class="relative">
+            <!--Section title-->
+            <div class="flex justify-center">
+                <h2 class="bg-white dark:text-black inline-block px-20 text-3xl font-italianno text-center mb-8">
+                    Chat With Our Chef
+                </h2>
+            </div>
+            <!--Chatbot interface-->
+            <div class="bg-white rounded max-w-[400px] ml-10 py-6 text-center"> <span class="font-italianno dark:text-black text-2xl">Ask Chef Kofi</span>
+            <!--Chatbot messages-->
+            <div class="w-full h-[400px] overflow-y-auto mb-4 bg-orange-100 scroll-smooth">
+                <!--Bot Message-->
+                <div class=" mt-12 mb-8 flex items-start gap-3">
+                <div class="flex items-center justify-center text-3xl flex-shrink-0 py-3"><svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M360-400h80v-200h-80v200Zm-160-60q-46-23-73-66.5T100-621q0-75 51.5-127T278-800q12 0 24.5 2t24.5 5q25-41 65-64t88-23q48 0 88 23t65 64q12-3 24-5t25-2q75 0 126.5 52T860-621q0 51-27 94.5T760-460v220H200v-220Zm320 60h80v-200h-80v200Zm-240 80h400v-189l44-22q26-13 41-36.5t15-52.5q0-42-28.5-71T682-720q-11 0-20 2t-19 5l-47 13-31-52q-14-23-36.5-35.5T480-800q-26 0-48.5 12.5T395-752l-31 52-48-13q-10-2-19.5-4.5T277-720q-41 0-69 29t-28 71q0 29 15 52.5t41 36.5l44 22v189Zm-80 80h80v80h400v-80h80v160H200v-160Zm280-80Z"/></svg></div>
+                <div class="max-w-[70%] px-2 py-3 rounded-[18px] bg-white text-black breakwords">
+                    Hey there. How can I help you today?
+                </div> 
+                </div>
+                <!--User Message-->
+                <div class="mb-8 flex justify-end gap-1">
+                <div class="max-w-[70%] px-2 py-3 rounded-[18px] bg-white text-black breakwords">
+                    What is your most popular dish?
+                </div> 
+                </div>
+                <!-- Typing Indicator -->
+                <div id="typingIndicator" class="flex items-center gap-2 px-4 py-3 text-gray-800 rounded-[18px] rounded-bl-[4px] max-w-fit">
+
+                <div class="flex gap-[0.2rem]">
+                    <div class="w-2 h-2 bg-gray-600 rounded-full typing-dot delay-1"></div>
+                    <div class="w-2 h-2 bg-gray-600 rounded-full typing-dot delay-2"></div>
+                    <div class="w-2 h-2 bg-gray-600 rounded-full typing-dot"></div>
+                </div>
+
+                <span class="ml-2"></span>
+                </div>
+                </div>
+                <!-- Input Area -->
+                <div class="flex items-center gap-1">
+                    <input type="text" placeholder="Write your Message"
+                    class="flex-grow px-4 py-3 border-2 border-white rounded outline-none focus:border-amber-600" />
+                    <button 
+                    class="w-[45px] h-[45px] bg-white text-black flex items-center justify-center text-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M620-520q25 0 42.5-17.5T680-580q0-25-17.5-42.5T620-640q-25 0-42.5 17.5T560-580q0 25 17.5 42.5T620-520Zm-280 0q25 0 42.5-17.5T400-580q0-25-17.5-42.5T340-640q-25 0-42.5 17.5T280-580q0 25 17.5 42.5T340-520Zm140 260q68 0 123.5-38.5T684-400h-66q-22 37-58.5 58.5T480-320q-43 0-79.5-21.5T342-400h-66q25 63 80.5 101.5T480-260Zm0 180q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-400Zm0 320q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Z"/></svg>
+                    </button>
+                    <button 
+                    class="w-[45px] h-[45px] bg-white text-black flex items-center justify-center text-xl">
+                    <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px" fill="#1f1f1f"><path d="M170-228q-38-45-61-99T80-440h82q6 43 22 82.5t42 73.5l-56 56ZM80-520q8-59 30-113t60-99l56 56q-26 34-42 73.5T162-520H80ZM438-82q-59-6-112.5-28.5T226-170l56-58q35 26 74 43t82 23v80ZM284-732l-58-58q47-37 101-59.5T440-878v80q-43 6-82.5 23T284-732ZM518-82v-80q44-6 83.5-22.5T676-228l58 58q-47 38-101.5 60T518-82Zm160-650q-35-26-75-43t-83-23v-80q59 6 113.5 28.5T734-790l-56 58Zm112 504-56-56q26-34 42-73.5t22-82.5h82q-8 59-30 113t-60 99Zm8-292q-6-43-22-82.5T734-676l56-56q38 45 61 99t29 113h-82ZM441-280v-247L337-423l-56-57 200-200 200 200-57 56-103-103v247h-80Z"/></svg>
+                    </button>
+                </div>
+                </div>
+            </div>
+            
+        <div class="inline-block px-10 py-10 mt-8">
+            <ul class="space-y-8">
+            <li class="bg-orange-100 dark:text-black px-22 py-3 cursor-pointer hover:text-gray-300">
+                What is your most popular dish?
+            </li>
+            <li class="bg-orange-100 dark:text-black px-7 py-3 cursor-pointer hover:text-gray-300">
+                How long does it take for food to be ready?
+            </li>
+            <li class="bg-orange-100 dark:text-black px-7 py-3 cursor-pointer hover:text-gray-300">
+                Do you offer delivery services?
+            </li>
+            </ul>
+        </div>
+        </section>
+    </main>
+
+    <footer class="py-8 px-4 mt-auto">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 items-start">
+        <!-- Left: Navigation & Contact -->
+            <div>
+            <!-- Nav (desktop) -->
+        <nav class="hidden md:flex space-x-6 mb-4">
+          <a href="#" class="hover:underline">Home</a>
+          <a href="#" class="hover:underline">Menu</a>
+          <a href="#" class="hover:underline">Our Story</a>
+          <a href="#" class="hover:underline">Feedback</a>
+        </nav>
+        <!-- Nav (mobile) -->
+        <div class="md:hidden mb-4">
+          <button id="footerMenuBtn" class="mb-2">
+            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+          <div id="footerMenu" class="hidden flex-col space-y-2">
+            <a href="#" class="hover:underline">Home</a>
+            <a href="#" class="hover:underline">Menu</a>
+            <a href="#" class="hover:underline">Our Story</a>
+            <a href="#" class="hover:underline">Feedback</a>
+          </div>
+        </div>
+        <div class="mb-2 font-semibold">Contact us:</div>
+        <div class="mb-1">Tel: +254789634456</div>
+        <div class="mb-4">@paradisoafrique@gmail.com</div>
+        <div class="flex space-x-4">
+          <!-- Facebook -->
+          <a href="#" aria-label="Facebook">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M22 12c0-5.522-4.477-10-10-10S2 6.478 2 12c0 5 3.657 9.127 8.438 9.877v-6.987h-2.54v-2.89h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.242 0-1.63.771-1.63 1.562v1.875h2.773l-.443 2.89h-2.33v6.987C18.343 21.127 22 17 22 12z"/>
+            </svg>
+          </a>
+          <!-- Instagram -->
+          <a href="#" aria-label="Instagram">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 1.5A4.25 4.25 0 0 0 3.5 7.75v8.5A4.25 4.25 0 0 0 7.75 20.5h8.5A4.25 4.25 0 0 0 20.5 16.25v-8.5A4.25 4.25 0 0 0 16.25 3.5h-8.5zm4.25 3.25a5.25 5.25 0 1 1 0 10.5 5.25 5.25 0 0 1 0-10.5zm0 1.5a3.75 3.75 0 1 0 0 7.5 3.75 3.75 0 0 0 0-7.5zm5.25.75a1 1 0 1 1-2 0 1 1 0 0 1 2 0z"/>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" aria-label="LinkedIn">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.761 0 5-2.239 5-5v-14c0-2.761-2.239-5-5-5zm-11 19h-3v-10h3v10zm-1.5-11.268c-.966 0-1.75-.784-1.75-1.75s.784-1.75 1.75-1.75 1.75.784 1.75 1.75-.784 1.75-1.75 1.75zm13.5 11.268h-3v-5.604c0-1.337-.025-3.063-1.868-3.063-1.868 0-2.154 1.459-2.154 2.967v5.7h-3v-10h2.881v1.367h.041c.401-.761 1.381-1.563 2.845-1.563 3.043 0 3.604 2.004 3.604 4.609v5.587z"/>
+            </svg>
+          </a>
+          <!-- X (Twitter) -->
+          <a href="#" aria-label="X">
+            <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M17.53 2.47a.75.75 0 0 1 1.06 1.06l-5.47 5.47 5.47 5.47a.75.75 0 0 1-1.06 1.06l-5.47-5.47-5.47 5.47a.75.75 0 0 1-1.06-1.06l5.47-5.47-5.47-5.47a.75.75 0 0 1 1.06-1.06l5.47 5.47 5.47-5.47z"/>
+            </svg>
+          </a>
+        </div>
+        </div>
+        <!-- Center: Map -->
+        <div class="flex flex-col items-center md:items-start">
+            <img src="img/footer-map.jpeg" alt="map" class="rounded mb-2 w-full max-w-[200px] h-auto object-cover">
+            <div class="text-center md:text-left">We are located at Lavington, Nairobi</div>
+        </div>
+        <!-- Right: Opening Hours -->
+        <div class="mt-6 md:mt-0">
+            <div class="font-semibold mb-2">Opening hours:</div>
+            <div>Mon-Sun 8.00am-10.00pm</div>
+        </div>
+        </div>
+    </footer>
+
+  </body>
+</html>
