@@ -8,6 +8,6 @@ router = APIRouter()
 async def chat(request: ChatRequest):
     try:
         response = generate_chat_response(request.message)
-        return {"response": response}
+        return {"reply": response}
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
