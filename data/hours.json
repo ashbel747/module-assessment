@@ -1,0 +1,11 @@
+{
+  "open_hours": {
+    "Monday": "8 AM – 10 PM",
+    "Tuesday": "8 AM – 10 PM",
+    "Wednesday": "8 AM – 10 PM",
+    "Thursday": "8 AM – 10 PM",
+    "Friday": "8 AM – 10 PM",
+    "Saturday": "8 AM – 10 PM",
+    "Sunday": "9 AM – 9 PM"
+  }
+}

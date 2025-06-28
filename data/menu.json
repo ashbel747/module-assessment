@@ -1,0 +1,28 @@
+{
+  "items": [
+    {
+      "name": "Kenyan Chapati with Beef Stew",
+      "description": "Soft layered flatbread served with rich, flavorful beef stew.",
+      "dietary": ["gluten"],
+      "spicy_level": "mild"
+    },
+    {
+      "name": "Nigerian Jollof Rice",
+      "description": "Spiced tomato rice cooked with vegetables and herbs.",
+      "dietary": ["gluten-free", "vegan"],
+      "spicy_level": "medium"
+    },
+    {
+      "name": "Swahili Biryani",
+      "description": "Aromatic rice dish with fragrant spices, meat or vegetables.",
+      "dietary": ["gluten-free"],
+      "spicy_level": "medium"
+    },
+    {
+      "name": "Ethiopian Doro Wat",
+      "description": "Spicy chicken stew served with injera bread, rich in tradition.",
+      "dietary": ["gluten"],
+      "spicy_level": "high"
+    }
+  ]
+}
