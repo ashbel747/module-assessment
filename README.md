@@ -16,3 +16,7 @@ This AI-powered chatbot serves as a virtual chef and assistant for **Paradiso Af
 - `data/hours.json` → Contains business hours for each day.
 
 Ideal for engaging users with **interactive, culturally rich restaurant info**.
+
+![trial](sample_images/screenshot1.png)
+![trial](sample_images/screenshot2.png)
+![trial](sample_images/screenshot3.png)
