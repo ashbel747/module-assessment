@@ -13,4 +13,4 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-app.include_router(chatbot_router, prefix="/chat")
+app.include_router(chatbot_router)
