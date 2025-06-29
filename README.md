@@ -49,3 +49,6 @@ Ideal for engaging users with **interactive, culturally rich restaurant info**.
 ![trial](sample_images/screenshot1.png)
 ![trial](sample_images/screenshot2.png)
 ![trial](sample_images/screenshot3.png)
+![trial](sample_images/screenshot4.png)
+![trial](sample_images/screenshot5.png)
+![trial](sample_images/screenshot6.png)
